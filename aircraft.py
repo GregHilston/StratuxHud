@@ -5,8 +5,8 @@ import threading
 import requests
 
 import configuration
-import lib.recurring_task as recurring_task
-from lib.simulated_values import SimulatedValue
+import recurring_task
+from simulated_values import SimulatedValue
 
 HEADING_NOT_AVAILABLE = '---'
 
@@ -22,7 +22,9 @@ class StratuxStatus(object):
         if key in self.__status_json__:
             try:
                 return bool(self.__status_json__[key])
-            except KeyboardInterrupt, SystemExit:
+            except KeyboardInterrupt:
+                raise
+            except SystemExit:
                 raise
             except:
                 return False
@@ -46,7 +48,9 @@ class StratuxStatus(object):
                 self.__status_json__ = stratux_session.get(
                     url, timeout=2).json()
 
-            except KeyboardInterrupt, SystemExit:
+            except KeyboardInterrupt:
+                raise
+            except SystemExit:
                 raise
             except:
                 self.__status_json__ = {}
@@ -71,7 +75,9 @@ class StratuxCapabilities(object):
         if key in self.__capabilities_json__:
             try:
                 return bool(self.__capabilities_json__[key])
-            except KeyboardInterrupt, SystemExit:
+            except KeyboardInterrupt:
+                raise
+            except SystemExit:
                 raise
             except:
                 return False
@@ -96,7 +102,9 @@ class StratuxCapabilities(object):
                 self.__capabilities_json__ = stratux_session.get(
                     url, timeout=2).json()
 
-            except KeyboardInterrupt, SystemExit:
+            except KeyboardInterrupt:
+                raise
+            except SystemExit:
                 raise
             except:
                 self.__capabilities_json__ = {}
@@ -267,7 +275,9 @@ class AhrsStratux(object):
             try:
                 return ahrs_json[key]
 
-            except KeyboardInterrupt, SystemExit:
+            except KeyboardInterrupt:
+                raise
+            except SystemExit:
                 raise
             except:
                 return default
@@ -299,7 +309,9 @@ class AhrsStratux(object):
         try:
             ahrs_json = self.__stratux_session__.get(url, timeout=2).json()
 
-        except KeyboardInterrupt, SystemExit:
+        except KeyboardInterrupt:
+            raise
+        except SystemExit:
             raise
         except:
             self.data_source_available = False

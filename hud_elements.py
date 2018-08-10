@@ -10,10 +10,17 @@ import pygame
 
 import units
 import configuration
+
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../lib')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../views')))
+
 import views.utils as utils
 
-from lib.display import *
-from lib.task_timer import TaskTimer
+from display import *
+from task_timer import TaskTimer
 from traffic import AdsbTrafficClient, Traffic
 
 SIN_RADIANS_BY_DEGREES = {}

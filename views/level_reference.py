@@ -1,12 +1,10 @@
 import pygame
 
-import testing
-testing.load_imports()
+import import_paths
 
-from lib.display import *
-from lib.task_timer import TaskTimer
+from display import *
+from task_timer import TaskTimer
 from ahrs_element import AhrsElement
-
 
 class LevelReference(AhrsElement):
     def __init__(self, degrees_of_pitch, pixels_per_degree_y, font, framebuffer_size):

@@ -10,14 +10,14 @@ import sys
 import pygame
 import requests
 
-import lib.display as display
-import lib.local_debug as local_debug
-import lib.utilities as utilities
+import display
+import local_debug
+import utilities
 import traffic
 from aircraft import Aircraft
 from configuration import *
-from lib.recurring_task import RecurringTask
-from lib.task_timer import TaskTimer
+from recurring_task import RecurringTask
+from task_timer import TaskTimer
 import hud_elements
 import targets
 from views import (adsb_on_screen_reticles, adsb_target_bugs,

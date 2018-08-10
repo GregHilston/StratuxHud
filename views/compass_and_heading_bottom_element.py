@@ -1,13 +1,13 @@
 import pygame
 
+import import_paths
+
 from compass_and_heading_top_element import CompassAndHeadingTopElement
 
-import testing
 import utils
-testing.load_imports()
 
-from lib.display import *
-from lib.task_timer import TaskTimer
+from display import *
+from task_timer import TaskTimer
 import hud_elements
 
 

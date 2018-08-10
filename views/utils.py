@@ -1,7 +1,3 @@
-import testing
-
-testing.load_imports()
-
 import configuration
 
 def apply_declination(heading):

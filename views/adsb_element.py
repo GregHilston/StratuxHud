@@ -1,18 +1,21 @@
 import math
 
 import pygame
-import utils
-import testing
 
-testing.load_imports()
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../lib')))
+import utils
+import hud_elements
 
 import units
-from configuration import Configuration
-import hud_elements
-from lib.display import *
-from lib.task_timer import TaskTimer
-import lib.colors as colors
+from display import *
+from task_timer import TaskTimer
+import colors
 import configuration
+from configuration import Configuration
 
 
 class AdsbElement(object):

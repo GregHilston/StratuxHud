@@ -1,7 +1,7 @@
 """
 Main entry code for Stratux HUD
 """
-# !python
+# !python3
 #
 #
 # Author: John Marzulli
@@ -38,7 +38,7 @@ import logging
 import logging.handlers
 
 import heads_up_display
-from lib.logger import Logger
+from logger import Logger
 
 python_logger = logging.getLogger("stratux_hud")
 python_logger.setLevel(logging.DEBUG)

@@ -1,12 +1,12 @@
 import pygame
 
+import import_paths
+
 from adsb_element import AdsbElement
 from hud_elements import *
 
-import testing
-testing.load_imports()
 
-from lib.task_timer import TaskTimer
+from task_timer import TaskTimer
 
 
 class AdsbTargetBugs(AdsbElement):

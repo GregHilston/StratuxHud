@@ -5,13 +5,12 @@ import math
 
 import struct
 
-import testing
-testing.load_imports()
+import import_paths
 
-from lib.display import *
-from lib.task_timer import TaskTimer
-import lib.colors as colors
-import lib.local_debug as local_debug
+from display import *
+from task_timer import TaskTimer
+import colors
+import local_debug
 import units
 import configuration
 from ahrs_element import AhrsElement

@@ -1,10 +1,9 @@
 import pygame
 
-import testing
-testing.load_imports()
+import import_paths
 
-import lib.display as display
-from lib.task_timer import TaskTimer
+import display
+from task_timer import TaskTimer
 from ahrs_element import AhrsElement
 
 

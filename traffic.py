@@ -16,8 +16,8 @@ from ws4py.client.threadedclient import WebSocketClient
 from ws4py.streaming import Stream
 
 import configuration
-import lib.recurring_task as recurring_task
-from lib.simulated_values import SimulatedValue
+import recurring_task
+from simulated_values import SimulatedValue
 
 # TODO - More work around making this a BG
 
@@ -549,7 +549,9 @@ class AdsbTrafficClient(WebSocketClient):
         print("Attempting to reconnect...")
         try:
             self.close_connection()
-        except KeyboardInterrupt, SystemExit:
+        except KeyboardInterrupt:
+            raise
+        except SystemExit:
             raise
         except:
             print("Issue trying to close_connection")

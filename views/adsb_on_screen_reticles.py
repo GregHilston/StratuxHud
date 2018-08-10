@@ -1,14 +1,13 @@
 import pygame
 
-from adsb_element import *
-from hud_elements import *
+from views.adsb_element import *
+from views.hud_elements import *
 
-testing.load_imports()
 
 import units
 
-from lib.display import *
-from lib.task_timer import TaskTimer
+from display import *
+from task_timer import TaskTimer
 
 
 class AdsbOnScreenReticles(AdsbElement):
